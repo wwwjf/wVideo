@@ -1,4 +1,4 @@
-package com.jiang.wvideo;
+package com.jiang.wvideo.splash;
 
 
 import android.os.Handler;

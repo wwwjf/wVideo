@@ -3,9 +3,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SplashActivity">
+    tools:context=".splash.SplashActivity">
 
-    <com.jiang.wvideo.FullScreenVideoView
+    <com.jiang.wvideo.splash.FullScreenVideoView
         android:id="@+id/vv_splash_play"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
@@ -22,6 +22,6 @@
         android:background="@drawable/shape_splash"
         android:gravity="center"
         android:text="跳过"
-        android:textColor="@color/color_ffffff"
+        android:textColor="@color/color_FFFFFF"
         android:textSize="18dp" />
 </FrameLayout>

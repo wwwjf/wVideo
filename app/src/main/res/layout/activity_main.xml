@@ -1,9 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:orientation="vertical">
 
-</android.support.constraint.ConstraintLayout>
+
+    <FrameLayout
+        android:id="@+id/fl_main_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/rg_main_bottom">
+
+    </FrameLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginBottom="1dp"
+        android:layout_above="@+id/rg_main_bottom"
+        android:background="@color/color_ADADAD"/>
+    <RadioGroup
+        android:id="@+id/rg_main_bottom"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:background="@android:color/transparent"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:visibility="visible">
+
+        <RadioButton
+            android:id="@+id/rb_main_nav_home_beijing"
+            style="@style/main_tab_rb_style"
+            android:drawableTop="@null"
+            android:checked="true"
+            android:text="北京" />
+
+        <RadioButton
+            android:id="@+id/rb_main_nav_home_shenzhen"
+            style="@style/main_tab_rb_style"
+            android:drawableTop="@null"
+            android:text="深圳" />
+
+        <RadioButton
+            android:id="@+id/rb_main_nav_home_shanghai"
+            style="@style/main_tab_rb_style"
+            android:drawableTop="@null"
+            android:text="上海" />
+
+        <RadioButton
+            android:id="@+id/rb_main_nav_home_guangzhou"
+            style="@style/main_tab_rb_style"
+            android:drawableTop="@null"
+            android:text="广州" />
+    </RadioGroup>
+
+</RelativeLayout>
