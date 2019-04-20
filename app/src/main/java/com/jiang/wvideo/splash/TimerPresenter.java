@@ -2,7 +2,8 @@ package com.jiang.wvideo.splash;
 
 import android.util.Log;
 
-import com.jiang.wvideo.mvp.base.BaseMvpPresenter;
+import com.jiang.mvp.base.BaseMvpPresenter;
+
 
 public class TimerPresenter extends BaseMvpPresenter<ISplashActivityContract.IView> implements ISplashActivityContract.IPresenter {
 

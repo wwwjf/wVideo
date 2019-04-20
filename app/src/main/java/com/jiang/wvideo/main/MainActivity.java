@@ -20,14 +20,14 @@ public class MainActivity extends BaseActivity implements IMainActivityContract.
 
     @BindView(R.id.fl_main_content)
     FrameLayout flMainContent;
-    @BindView(R.id.rb_main_nav_home_beijing)
+    @BindView(R.id.rb_main_nav_home)
     RadioButton rbMainNavHomeBeijing;
-    @BindView(R.id.rb_main_nav_home_shenzhen)
+    @BindView(R.id.rb_main_nav_mine)
     RadioButton rbMainNavCarSourceShenzhen;
-    @BindView(R.id.rb_main_nav_home_shanghai)
-    RadioButton rbMainNavHomeShanghai;
-    @BindView(R.id.rb_main_nav_home_guangzhou)
-    RadioButton rbMainNavCarSourceGuangzhou;
+    @BindView(R.id.rb_main_nav_category)
+    RadioButton rbMainNavCategory;
+    @BindView(R.id.rb_main_nav_search)
+    RadioButton rbMainNavSearch;
     @BindView(R.id.rg_main_bottom)
     RadioGroup rgMainBottom;
     private MainActivityPresenter mPresenter = new MainActivityPresenter(this);
@@ -54,23 +54,23 @@ public class MainActivity extends BaseActivity implements IMainActivityContract.
         getSupportFragmentManager().beginTransaction().hide(fragment).commit();
     }
 
-    @OnClick({R.id.rb_main_nav_home_beijing,
-            R.id.rb_main_nav_home_shenzhen,
-            R.id.rb_main_nav_home_shanghai,
-            R.id.rb_main_nav_home_guangzhou})
+    @OnClick({R.id.rb_main_nav_home,
+            R.id.rb_main_nav_mine,
+            R.id.rb_main_nav_category,
+            R.id.rb_main_nav_search})
     public void onClick(View view) {
         switch (view.getId()) {
-            case R.id.rb_main_nav_home_beijing:
-                mPresenter.replaceFragment(MainConstantTool.BEIJING);
+            case R.id.rb_main_nav_home:
+                mPresenter.replaceFragment(MainConstantTool.MAIN_HOME);
                 break;
-            case R.id.rb_main_nav_home_shenzhen:
-                mPresenter.replaceFragment(MainConstantTool.SHENZHEN);
+            case R.id.rb_main_nav_category:
+                mPresenter.replaceFragment(MainConstantTool.MAIN_CATEGORY);
                 break;
-            case R.id.rb_main_nav_home_shanghai:
-                mPresenter.replaceFragment(MainConstantTool.SHANGHAI);
+            case R.id.rb_main_nav_search:
+                mPresenter.replaceFragment(MainConstantTool.MAIN_SEARCH);
                 break;
-            case R.id.rb_main_nav_home_guangzhou:
-                mPresenter.replaceFragment(MainConstantTool.GUANGZHOU);
+            case R.id.rb_main_nav_mine:
+                mPresenter.replaceFragment(MainConstantTool.MAIN_MINE);
                 break;
         }
     }

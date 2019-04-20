@@ -2,12 +2,12 @@ package com.jiang.wvideo.main;
 
 import android.support.v4.app.Fragment;
 
+import com.jiang.mvp.base.BaseMvpPresenter;
 import com.jiang.wvideo.R;
-import com.jiang.wvideo.main.BeijingFragment.BeijingFrgment;
-import com.jiang.wvideo.main.GuanzhouFragment.GuanzhouFrgment;
-import com.jiang.wvideo.main.shenzhen.shenzhenFrgment;
-import com.jiang.wvideo.main.shanghai.ShangHaiFrgment;
-import com.jiang.wvideo.mvp.base.BaseMvpPresenter;
+import com.jiang.wvideo.main.home.HomeFrgment;
+import com.jiang.wvideo.main.search.SearchFrgment;
+import com.jiang.wvideo.main.mine.MineFrgment;
+import com.jiang.wvideo.main.categoryr.CategoryFrgment;
 import com.jiang.wvideo.utils.MainConstantTool;
 
 public class MainActivityPresenter extends BaseMvpPresenter<IMainActivityContract.IView> implements IMainActivityContract.IPresenter {
@@ -32,7 +32,7 @@ public class MainActivityPresenter extends BaseMvpPresenter<IMainActivityContrac
     @Override
     public void initFragment() {
 
-        mCurrentFragmentIndex = MainConstantTool.BEIJING;
+        mCurrentFragmentIndex = MainConstantTool.MAIN_HOME;
         replaceFragment(mCurrentFragmentIndex);
     }
 
@@ -71,17 +71,17 @@ public class MainActivityPresenter extends BaseMvpPresenter<IMainActivityContrac
 
         this.mCurrentFragmentIndex = mCurrentFragmentIndex;
         switch (mCurrentFragmentIndex) {
-            case MainConstantTool.BEIJING:
-                mCurrentCheckId = R.id.rb_main_nav_home_beijing;
+            case MainConstantTool.MAIN_HOME:
+                mCurrentCheckId = R.id.rb_main_nav_home;
                 break;
-            case MainConstantTool.SHENZHEN:
-                mCurrentCheckId = R.id.rb_main_nav_home_shenzhen;
+            case MainConstantTool.MAIN_CATEGORY:
+                mCurrentCheckId = R.id.rb_main_nav_mine;
                 break;
-            case MainConstantTool.SHANGHAI:
-                mCurrentCheckId = R.id.rb_main_nav_home_shanghai;
+            case MainConstantTool.MAIN_SEARCH:
+                mCurrentCheckId = R.id.rb_main_nav_category;
                 break;
-            case MainConstantTool.GUANGZHOU:
-                mCurrentCheckId = R.id.rb_main_nav_home_guangzhou;
+            case MainConstantTool.MAIN_MINE:
+                mCurrentCheckId = R.id.rb_main_nav_search;
                 break;
             default:
                 break;
@@ -96,17 +96,17 @@ public class MainActivityPresenter extends BaseMvpPresenter<IMainActivityContrac
     private void newCurrentFragment(int mCurrentFragmentIndex) {
         Fragment fragment = null;
         switch (mCurrentFragmentIndex) {
-            case MainConstantTool.BEIJING:
-                fragment = new BeijingFrgment();
+            case MainConstantTool.MAIN_HOME:
+                fragment = new HomeFrgment();
                 break;
-            case MainConstantTool.SHENZHEN:
-                fragment = new shenzhenFrgment();
+            case MainConstantTool.MAIN_CATEGORY:
+                fragment = new CategoryFrgment();
                 break;
-            case MainConstantTool.SHANGHAI:
-                fragment = new ShangHaiFrgment();
+            case MainConstantTool.MAIN_SEARCH:
+                fragment = new SearchFrgment();
                 break;
-            case MainConstantTool.GUANGZHOU:
-                fragment = new GuanzhouFrgment();
+            case MainConstantTool.MAIN_MINE:
+                fragment = new MineFrgment();
                 break;
             default:
                 break;

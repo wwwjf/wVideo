@@ -31,29 +31,29 @@
         android:visibility="visible">
 
         <RadioButton
-            android:id="@+id/rb_main_nav_home_beijing"
+            android:id="@+id/rb_main_nav_home"
             style="@style/main_tab_rb_style"
             android:drawableTop="@null"
             android:checked="true"
-            android:text="北京" />
+            android:text="首页" />
 
         <RadioButton
-            android:id="@+id/rb_main_nav_home_shenzhen"
+            android:id="@+id/rb_main_nav_category"
             style="@style/main_tab_rb_style"
             android:drawableTop="@null"
-            android:text="深圳" />
+            android:text="分类" />
 
         <RadioButton
-            android:id="@+id/rb_main_nav_home_shanghai"
+            android:id="@+id/rb_main_nav_search"
             style="@style/main_tab_rb_style"
             android:drawableTop="@null"
-            android:text="上海" />
+            android:text="搜索" />
 
         <RadioButton
-            android:id="@+id/rb_main_nav_home_guangzhou"
+            android:id="@+id/rb_main_nav_mine"
             style="@style/main_tab_rb_style"
             android:drawableTop="@null"
-            android:text="广州" />
+            android:text="我的" />
     </RadioGroup>
 
 </RelativeLayout>

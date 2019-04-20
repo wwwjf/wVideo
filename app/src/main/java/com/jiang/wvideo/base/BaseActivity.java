@@ -3,7 +3,7 @@ package com.jiang.wvideo.base;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 
-import com.jiang.wvideo.mvp.view.LifeCycleMvpActivity;
+import com.jiang.mvp.view.LifeCycleMvpActivity;
 
 import butterknife.ButterKnife;
 

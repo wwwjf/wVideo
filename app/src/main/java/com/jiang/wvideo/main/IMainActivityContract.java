@@ -2,9 +2,10 @@ package com.jiang.wvideo.main;
 
 import android.support.v4.app.Fragment;
 
-import com.jiang.wvideo.mvp.ILifeCycle;
-import com.jiang.wvideo.mvp.IMvpView;
-import com.jiang.wvideo.mvp.MvpController;
+import com.jiang.mvp.ILifeCycle;
+import com.jiang.mvp.IMvpView;
+import com.jiang.mvp.MvpController;
+
 
 public interface IMainActivityContract {
 

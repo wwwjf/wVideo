@@ -8,7 +8,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.jiang.wvideo.mvp.view.LifeCycleMvpFragment;
+
+import com.jiang.mvp.view.LifeCycleMvpFragment;
 
 import butterknife.ButterKnife;
 

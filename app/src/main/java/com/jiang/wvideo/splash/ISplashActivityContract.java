@@ -1,8 +1,9 @@
 package com.jiang.wvideo.splash;
 
-import com.jiang.wvideo.mvp.ILifeCycle;
-import com.jiang.wvideo.mvp.IMvpView;
-import com.jiang.wvideo.mvp.MvpController;
+
+import com.jiang.mvp.ILifeCycle;
+import com.jiang.mvp.IMvpView;
+import com.jiang.mvp.MvpController;
 
 public interface ISplashActivityContract {
 
