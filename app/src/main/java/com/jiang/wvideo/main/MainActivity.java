@@ -21,9 +21,9 @@ public class MainActivity extends BaseActivity implements IMainActivityContract.
     @BindView(R.id.fl_main_content)
     FrameLayout flMainContent;
     @BindView(R.id.rb_main_nav_home)
-    RadioButton rbMainNavHomeBeijing;
+    RadioButton rbMainNavHome;
     @BindView(R.id.rb_main_nav_mine)
-    RadioButton rbMainNavCarSourceShenzhen;
+    RadioButton rbMainNavMine;
     @BindView(R.id.rb_main_nav_category)
     RadioButton rbMainNavCategory;
     @BindView(R.id.rb_main_nav_search)
@@ -36,7 +36,7 @@ public class MainActivity extends BaseActivity implements IMainActivityContract.
     public void onCreateBaseActivity() {
 
         mPresenter.initFragment();
-        rbMainNavHomeBeijing.setChecked(true);
+        rbMainNavHome.setChecked(true);
     }
 
     @Override
